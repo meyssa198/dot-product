@@ -1,0 +1,38 @@
+PROCEDURE product(v1,v2, VAR sum)
+VAR
+    i : INTEGER;
+BEGIN
+    FOR i FROM 0 TO v1.length STEP 1  DO
+        sum := sum + (v1[i]*v2[i]);
+    END_FOR
+    write(sum);
+END
+ALGORITHM dot_product
+VAR
+    n,i : INTEGER;
+    v1,v2 : ARRAY_OF INTEGER[50];
+BEGIN
+ write ("nmbr de paires : ");
+    read (m);
+    i := 0;
+    j:=0;
+    WHILE(i<=m) DO 
+        WHILE (j<=2) DO
+            read(v[i][j]); 
+            read(u[i][j]);
+            j:=j+1
+        END_WHILE
+        i:=i+1;
+    END_WHILE 
+    FOR i FROM 0 TO m-1 STEP 1  DO
+    FOR j FROM 0 TO 2 STEP 1  DO
+         IF (product(v[i][j],u[i][j],sum)=0) THEN
+        write("v1 et v2 are orthogonal");
+    ELSE
+        write("dot product =",product(v[i][j],u[i][j],sum);
+    END_IF
+    END_FOR
+       
+    END_FOR
+     
+END

@@ -1,0 +1,40 @@
+FUNCTION product(v1,v2) : FLOAT
+VAR
+    sum : FLOAT;
+    i : INTEGER;
+BEGIN
+    sum :=0;
+    FOR i FROM 0 TO v1.length-1 STEP 1  DO
+        sum := sum + (v1[i]*v2[i]);
+    END_FOR
+    RETURN sum ;
+END
+ALGORITHM dot_product
+VAR
+    n,i : INTEGER;
+    v : ARRAY_OF INTEGER[2][50];
+    sum :  FLOAT;
+BEGIN
+    write ("nmbr de paires : ");
+    read (m);
+    i := 0;
+    j:=0;
+    WHILE(i<=m) DO 
+        WHILE (j<=2) DO
+            read(v[i][j]); 
+            read(u[i][j]);
+            j:=j+1
+        END_WHILE
+        i:=i+1;
+    END_WHILE 
+    FOR i FROM 0 TO m-1 STEP 1  DO
+    FOR j FROM 0 TO 2 STEP 1  DO
+         IF (product(v[i][j],u[i][j])=0) THEN
+        write("v1 et v2 are orthogonal");
+    ELSE
+        write("dot product =",product(v[i][j],u[i][j]);
+    END_IF
+    END_FOR
+       
+    END_FOR
+END
