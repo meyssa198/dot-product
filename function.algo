@@ -12,10 +12,11 @@ END
 ALGORITHM dot_product
 VAR
     n,i : INTEGER;
-    v : ARRAY_OF INTEGER[2][50];
+    v : ARRAY_OF INTEGER[50][50];
+    u : ARRAY_OF INTEGER[50][50];
     sum :  FLOAT;
 BEGIN
-    write ("nmbr de paires : ");
+    write ("n : ");
     read (m);
     i := 0;
     j:=0;
